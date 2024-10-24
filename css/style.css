@@ -96,7 +96,6 @@ a{
     .nav-links.active {
         display: flex;
     }
-
     .burger {
         display: flex;
     }
@@ -118,50 +117,30 @@ a{
     margin: 4px 0; /* مسافة بين كل خط والآخر */
     transition: all 0.3s ease;
 }
-
 /* جعل الـ burger يظهر في الشاشات الصغيرة */
 @media screen and (max-width: 768px) {
     .burger {
         display: flex;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .slider {
     width: 100%;
     margin: 50px auto;
     overflow: hidden;
     position: relative;
 }
-
 .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
     flex-direction: row-reverse; 
 }
-
 .slide {
     min-width: 100%;
     position: relative;
 }
-
 .slide img {
     width: 100%;
 }
-
 /* text img*/
 .caption {
     position: absolute;
@@ -188,7 +167,6 @@ font-weight: 900;
 width: 600px;
 }
 
-
 /* arrow */
 .arrow {
     position: absolute;
@@ -212,8 +190,6 @@ width: 600px;
 }
 
     /* supporter */
-
-
 .Supporter{
     margin: 30px;
     border-radius: 10px;
@@ -251,8 +227,6 @@ main .text-sup5{
     color: var(--blue);
     font-weight: 700;
 }
-
-
     /* about */
 .about{
     text-align: center;
@@ -284,36 +258,64 @@ main .text-sup5{
     font-size: 40px;
     text-transform: capitalize;
 }
-.lists{
-    display: flex;
-    margin: 30px;
+.Conference-Topics {
+    padding: 20px; /* إضافة مسافة داخلية */
+    max-width: 1200px; /* تحديد أقصى عرض */
+    margin: auto; /* مركزية المحتوى */
+}
+
+/* تنسيق العناوين */
+.Conference-Topics h2 {
+    text-align: center; /* توسيط العناوين */
+    margin-bottom: 20px; /* مسافة أسفل العنوان */
+}
+
+/* تنسيق القوائم */
+.lists {
+    display: flex; /* استخدام flexbox */
+    flex-wrap: wrap; /* السماح بالتفاف العناصر */
+    justify-content: space-between; /* توزيع العناصر بالتساوي */
     background-color: #50c8f31b;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
     padding: 10px 20px;
     border-radius: 10px;
 }
-.list-topics{
-    margin: 70px;
-    width: 40%;
-    padding: 60px;
-    list-style:circle;
-    font-weight: 400;
-    font-size: 20px;
-    list-style: 1;
-}
-.list-topics-en {
-    margin: 70px;
-    width: 40%;
-    padding: 50px;
-    list-style:circle;
-    font-weight: 400;
-    font-size: 20px;
-    text-align: left;
-}
-.list-topics-en ol li{
-direction: ltr !important;
+
+/* تنسيق قوائم المواضيع */
+.list-topics, .list-topics-en {
+    flex: 1; /* السماح بتوسيع العنصر */
+    min-width: 250px; /* الحد الأدنى للعرض */
+    margin: 10px; /* مسافة بين القوائم */
 }
 
+/* تنسيق القوائم المرتبة */
+.list-topics ol, .list-topics-en ol {
+    padding-left: 20px; /* مسافة داخلية لليسار */
+    list-style-position: inside; /* وضع علامات النقاط داخل القائمة */
+}
+
+/* ضبط النمط للكتابة باللغة العربية */
+.list-topics {
+    direction: rtl; /* اتجاه النص من اليمين إلى اليسار */
+}
+
+/* ضبط النمط للكتابة باللغة الإنجليزية */
+.list-topics-en li{
+    direction: ltr; /* اتجاه النص من اليسار إلى اليمين */
+    text-align: start;
+}
+
+/* إضافة قواعد استجابة للشاشات الصغيرة */
+@media screen and (max-width: 768px) {
+    .lists {
+        flex-direction: column; /* ترتيب العناصر عموديًا */
+        align-items: center; /* توسيط العناصر */
+    }
+    .list-topics, .list-topics-en {
+        width: 100%; /* ملء العرض بالكامل */
+        margin: 10px 0; /* مسافة عمودية بين القوائم */
+    }
+}
 .main-content {
     padding: 50px;
     margin-top: 70px;
